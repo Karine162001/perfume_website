@@ -1,0 +1,139 @@
+.product_items>.box::-webkit-scrollbar {
+    background: transparent;
+    width: 20px;
+}
+
+.product_items>.box::-webkit-scrollbar-thumb {
+    background: linear-gradient(black, rebeccapurple, black);
+    cursor: pointer;
+}
+
+.product_items>.box::-webkit-scrollbar-track {
+    background: black;
+}
+
+.product_items {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 789 !important;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    padding-top: 110px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+    .box {
+        width: 100%;
+        height: 100%;
+        background: black;
+        color: white;
+        overflow-y: scroll;
+        padding: 100px 25px;
+
+        .shopItems {
+            width: 100%;
+            padding: 1px;
+            position: relative;
+            overflow: hidden !important;
+            margin-top: 30px;
+
+            .effectItem {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: black;
+                position: relative;
+                padding: 15px 0;
+
+                img {
+                    width: 190px;
+                    border-radius: 10px;
+                    box-shadow: -2px -3px 5px white;
+                }
+
+                span {
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    color: transparent;
+                    background: linear-gradient(tan, green, green);
+                    background-clip: text;
+                    letter-spacing: 2px;
+                    -webkit-box-reflect: below 0 linear-gradient(transparent, black);
+                }
+
+                p {
+                    width: 350px;
+                    font-size: 15px;
+                    color: #8F6E49;
+                    text-align: center;
+                }
+
+                .btns {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    button {
+                        background: linear-gradient(#660065, black, black);
+                        border: none;
+                        color: white;
+                        font-size: 25px;
+                        padding: 7px 20px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        box-shadow: 1px 1px 1px #8f6e4982, -1px -1px 1px #8f6e4982;
+                    }
+
+                    em {
+                        font-style: normal;
+                        font-size: 25px;
+                    }
+                }
+
+                .but_3 {
+                    background: linear-gradient(black, black, #660065);
+                    border: none;
+                    color: white;
+                    font-size: 20px;
+                    padding: 9px 19px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    box-shadow: 1px 1px 1px #ffffff4f,
+                        -1px -1px 1px #ffffff4f;
+                }
+
+            }
+
+        }
+
+        .forBtns {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 110px;
+
+            button {
+                padding: 12px 0;
+                font-size: 40px;
+                cursor: pointer;
+                background: linear-gradient(to right, #370037, #370037, #7B007C, black, #310900, #B73303, #B73303, #B73303, black, #190019);
+                border: none;
+                color: white;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+@keyframes effectItems {
+    to {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}

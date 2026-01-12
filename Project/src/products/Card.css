@@ -1,0 +1,112 @@
+.card_product {
+  background: black;
+  top: 0;
+  left: 0;
+  z-index: 999 !important;
+  height: 100vh;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+
+  h3 {
+    color: tan;
+    font-size: 35px;
+    letter-spacing: 3px;
+    text-transform: capitalize !important;
+  }
+
+  .box {
+    width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    
+    button {
+        background: transparent;
+        cursor: pointer;
+        color: black;
+        font-size: 100px;
+
+        svg {
+          filter: drop-shadow(0 0 1.5px tan) drop-shadow(0 0 1.5px tan);
+        }
+    }
+
+    button:hover {
+        transform: scale(.9);
+        transition: all .1s;
+    }
+  }
+}
+
+.card_product > .box > .cardForm {
+  width: 700px !important;
+  border: 1px solid darkred;
+  position: relative;
+}
+
+.card_product > .box > .cardForm > .front {
+  position: absolute;
+  background: url("../upDown/cardFront.png");
+  background-size: 100% 170%;
+  background-position: 100% 0%;
+  width: 100%;
+  height: 100%;
+  /* Henc Werjacnes Sa opacity Bacir Ancir Myus Nkarin; */
+   backface-visibility: visible;
+}
+
+.card_product > .box > .cardForm > .back {
+  position: absolute;
+  background: url("../upDown/cardBack.png");
+  background-size: 100% 170%;
+  background-position: 100% 108%;
+  width: 100%;
+  height: 100%;
+  /* Henc Werjacnes Sa opacity Bacir Ancir Myus Nkarin; */
+  /* transform: rotateY(180deg); սա դարձնում է հետևի կողմը */
+  backface-visibility: hidden;
+   transform: rotateY(180deg);
+}
+
+.card_product > .box > .cardForm,
+.card_product > .box > form {
+  width: 550px;
+  height: 400px;
+  position: relative;
+   transform-style: preserve-3d; 
+  perspective: 1000px; 
+}
+
+.card_product > .box > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    
+    input {
+      padding: 12px 15px;
+      color: tan;
+      background: #111;
+      border-top: 1px solid tan;
+      border-left: 1px solid tan;
+      font-size: 27px;
+      font-style: oblique;
+      letter-spacing: 3px;
+      text-transform: capitalize;
+      text-align: right;
+    }
+  }
+}

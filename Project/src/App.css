@@ -1,0 +1,9 @@
+.App {
+  background: black;
+  min-height: 100vh;
+  padding-top: 103px;
+}
+
+.box {
+  width: 1450px;
+}

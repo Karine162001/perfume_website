@@ -1,0 +1,60 @@
+.slider {
+    width: 100%;
+    height: 900px;
+    background: black;
+    color: white;
+    overflow: hidden !important;
+
+    .sliderBox {
+        width: 500%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        
+        .items {
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100% !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            position: relative;
+            left: -20%;
+        }
+    }
+}
+
+aside {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    padding: 0px 35px;
+
+    button {
+        background: transparent;
+        animation: forSlid 2s linear infinite;
+
+        svg {
+            font-size: 130px;
+            cursor: pointer;
+            color: black;
+            filter: drop-shadow(3px 0 5px tan) drop-shadow(3px 0 5px tan);
+        }
+    }
+
+    button:nth-of-type(2) {
+        svg {
+            filter: drop-shadow(-3px 0 5px tan) drop-shadow(-3px 0 5px tan);
+        }
+    }
+}
+
+@keyframes forSlid {
+    50% {
+        transform: scale(.97);
+    }
+}
